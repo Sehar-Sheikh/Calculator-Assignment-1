@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
 
 const answers = await inquirer.prompt([
@@ -13,13 +15,13 @@ const answers = await inquirer.prompt([
         name: 'operator',
         message: 'Select Operator:',
         type: 'list',
-        choices: ['Add','Subtract','Multiply','Divide']
+        choices: ['Addition','Subtract','Multiply','Divide']
     }
 ])
 
 console.log(answers)
 let result: number
-if(answers.operator === 'Add')
+if(answers.operator === 'Addition')
 {
     //Addition function
      result = answers.firstNumber + answers.secondNumber
